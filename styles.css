@@ -22,60 +22,7 @@
     font-display: swap;
 }
 
-/* Add icon font */
-@font-face {
-    font-family: 'Material Icons';
-    src: url('assets/fonts/material-icons/MaterialIcons-Regular.woff2') format('woff2'),
-         url('assets/fonts/material-icons/MaterialIcons-Regular.woff') format('woff'),
-         url('assets/fonts/material-icons/MaterialIcons-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-
-/* Add Material Symbols font */
-@font-face {
-    font-family: 'Material Symbols Outlined';
-    src: url('assets/fonts/material-symbols/material-symbols-outlined.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-}
-
-.material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-    vertical-align: middle;
-}
+/* Remove Material Icons and Material Symbols font-face definitions */
 
 * {
     margin: 0;
@@ -185,12 +132,12 @@ nav {
     transform: translateY(-2px);
 }
 
-.nav-links li a .material-symbols-outlined {
+.nav-links li a  {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
 }
 
-.nav-links li a:hover .material-symbols-outlined {
+.nav-links li a:hover  {
     transform: translateY(-2px);
 }
 
@@ -200,7 +147,7 @@ nav {
     font-weight: 600;
 }
 
-.nav-links li a.active .material-symbols-outlined {
+.nav-links li a.active  {
     font-weight: 600;
 }
 
@@ -478,7 +425,7 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
     transform: translateX(10px);
 }
 
-.mobile-menu ul li a .material-symbols-outlined {
+.mobile-menu ul li a  {
     font-size: 1.5rem;
 }
 
@@ -706,6 +653,56 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
     flex-direction: column;
     gap: 1rem;
 }
+    
+/* Optional: เพิ่ม pattern ให้พื้นหลัง */
+.about-section {
+    background-image: 
+        linear-gradient(rgba(232, 245, 233, 0.95), rgba(232, 245, 233, 0.95)),
+        url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1z' fill='%234CAF50' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.contact-section {
+    background-image: 
+        linear-gradient(rgba(200, 230, 201, 0.95), rgba(200, 230, 201, 0.95)),
+        url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h2v2H0V0zm4 4h2v2H4V4zm4 0h2v2H8V4zm4 0h2v2h-2V4zm4 0h2v2h-2V4z' fill='%234CAF50' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.about-section h2, .contact-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c5f2d;
+}
+
+.about-content, .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.about-content ul {
+    margin-top: 1rem;
+    padding-left: 2rem;
+}
+
+.about-content ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.about-content ul li::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
 .contact-info p {
     display: flex;
@@ -733,7 +730,7 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
     color: #4CAF50;
 }
 
-.social-links .material-symbols-outlined {
+.social-links  {
     font-size: 1.2rem;
     color: #4CAF50;
 }
@@ -767,7 +764,7 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.highlight-card .material-symbols-outlined {
+.highlight-card  {
     font-size: 3rem;
     color: #2c5f2d;
     margin-bottom: 1rem;
@@ -840,7 +837,7 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
     transform: translateY(-5px);
 }
 
-.feature .material-symbols-outlined {
+.feature  {
     font-size: 2.5rem;
     color: #2c5f2d;
     margin-bottom: 1rem;
@@ -931,7 +928,7 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
     padding: 0.5rem;
 }
 
-.cookie-content .material-symbols-outlined {
+.cookie-content  {
     font-size: 2rem;
     color: #2c5f2d;
 }
@@ -1003,11 +1000,6 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
 
 .card:hover {
     transform: translateY(-5px);
-}
-
-.material-symbols-outlined {
-    font-size: 2rem;
-    color: #198754;
 }
 
 /* Override Bootstrap navbar styles */
@@ -1108,7 +1100,7 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
     }
 
     .nav-item {
-        margin: 0.5rem 0;
+        /* margin: 0.5rem 0; */
     }
 
     .nav-link::after {
@@ -1131,23 +1123,24 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
 
 /* Updated Navbar styles */
 .navbar-nav {
-    gap: 0.75rem;
-    padding: 0.5rem;
+    gap: 0.15rem;
+    padding: 0.25rem;
 }
 
 .nav-item {
-    margin: 0 0.25rem;
+    /* margin: 0 0.25rem; */
 }
 
 .nav-link {
-    padding: 0.8rem 1.5rem !important;
-    border-radius: 12px !important;
+    padding: 0.375rem 0.75rem !important;
+    border-radius: 0.25rem !important;
     color: #4CAF50 !important;
     background-color: #F1F8E9;
     transition: all 0.3s ease;
-    font-size: 1.1rem;
-    position: relative;
-    overflow: hidden;
+    font-size: 1rem;
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-link:hover {
@@ -1198,7 +1191,7 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
 }
 
 /* Update icon styles in navbar */
-.nav-link .material-symbols-outlined {
+.nav-link  {
     font-size: 1.2rem;
     margin-right: 0.5rem;
     color: currentColor;
@@ -1229,3 +1222,38 @@ header .mobile-menu-checkbox:checked ~ .mobile-menu {
 }
 
 /* ...existing custom styles... */
+
+/* Login Modal Styles */
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #2c5f2d;
+}
+
+.input-group-text {
+    border: none;
+    color: #4CAF50;
+}
+
+.form-control {
+    border-left: none;
+    padding-left: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #4CAF50;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}

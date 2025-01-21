@@ -17,10 +17,6 @@ plant-website-bootstrap/
 │   │   │   ├── Kanit-Regular.ttf
 │   │   │   ├── Kanit-Medium.ttf
 │   │   │   └── Kanit-Bold.ttf
-│   │   ├── material-icons/
-│   │   │   └── MaterialIcons-Regular.woff2
-│   │   └── material-symbols/
-│   │       └── MaterialSymbolsOutlined.woff2
 └── index.html
 └── style.css
 ```
