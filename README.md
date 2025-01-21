@@ -17,6 +17,10 @@ plant-website-bootstrap/
 │   │   │   ├── Kanit-Regular.ttf
 │   │   │   ├── Kanit-Medium.ttf
 │   │   │   └── Kanit-Bold.ttf
+│   │   ├── Prompt/
+│   │   │   ├── Prompt-Regular.ttf
+│   │   │   ├── Prompt-Medium.ttf
+│   │   │   └── Prompt-Bold.ttf
 └── index.html
 └── style.css
 ```
